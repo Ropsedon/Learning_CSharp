@@ -1,2 +1,2 @@
 # Learning_CSharp
-Stepik basic course
+Pluralsight
