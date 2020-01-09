@@ -6,7 +6,8 @@ namespace GradeBook
     class Program
     {
         static void Main(string[] args)
-        {
+        {            
+
             if(args.Length > 0)
             {
                 //Concatenation of string
@@ -84,10 +85,13 @@ namespace GradeBook
             System.Console.WriteLine($"The average value of list: {avarage_value:N2}");
             System.Console.WriteLine($"The average value of list: {avarage_value:N3}");
 
-            //Use another class in one space
+            //Use another class in one space (incapsulation)
             var book = new Book();
-            book.AddGrade(99.1);
-
+            book.AddGrade(55.1);
+            book.AddGrade(75.2);
+            book.AddGrade(66.1);
+            book.AddGrade(95.3);
+            book.ShowStatistics();
         }
     }
 }
