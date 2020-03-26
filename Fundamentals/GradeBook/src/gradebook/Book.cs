@@ -32,24 +32,23 @@ namespace GradeBook
         }
 
         //Statistic of the collection
-        public void Statistic()
+        public Statistics GetStatistic()
         {
-            var highGrade = double.MinValue;
-            var lowGrade = double.MaxValue;
-            var everageGrade = 0.0;
+            var result = new Statistics();
+            result.Average = 0.0;
+            result.High = double.MinValue;
+            result.Low = double.MaxValue;
 
-            foreach(var number in grades)
+            foreach(var grade in grades)
             {
-                lowGrade = Math.Min(number, lowGrade);
-                highGrade = Math.Max(number, highGrade);
-                everageGrade += number;
+                result.Low = Math.Min(grade, result.Low);
+                result.High = Math.Max(grade, result.High);
+                result.Average += grade;
             }
 
-            everageGrade /= grades.Count;
+            result.Average /= grades.Count;
 
-            Console.WriteLine($"The lowest grade is: {lowGrade}");
-            Console.WriteLine($"The average grade is: {everageGrade:N2}");
-            Console.WriteLine($"The highest grade is: {highGrade}");
+            return result;
         }
 
      
