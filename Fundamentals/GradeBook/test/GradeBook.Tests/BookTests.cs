@@ -6,7 +6,7 @@ namespace GradeBook.Tests
     public class BookTests
     {
         [Fact] // atribute
-        public void Test1()
+        public void BookCalculatesAnAverageGrade()
         {
             // arrange - contains variables or conditions
             var a = 5;
