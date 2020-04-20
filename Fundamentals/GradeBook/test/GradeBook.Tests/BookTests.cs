@@ -37,5 +37,17 @@ namespace GradeBook.Tests
             Assert.Equal(92.03, result.High);
             Assert.Equal(77.01, result.Low);
         }
+
+        // [Fact] // atribute
+        // public void ValidateValue()
+        // {
+        //     // arrange - contains variables or conditions
+        //     var book = new Book("");
+        //     book.AddGrades(100.01);
+
+            // act - contains conditions of the execution
+
+            // assert - compare actual and expected result
+        }
     }
 }

@@ -15,7 +15,15 @@ namespace GradeBook
         //Add value of collection
         public void AddGrades(double grade)
         {
-            grades.Add(grade);
+            // If statement
+            if(grade >= 0 && grade <= 100)
+            {
+                grades.Add(grade);
+            }
+            else
+            {
+                Console.WriteLine("Invalid value!");
+            }
         }
 
         //Remove value of collection
