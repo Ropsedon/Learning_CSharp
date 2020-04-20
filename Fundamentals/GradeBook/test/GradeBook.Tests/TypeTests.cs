@@ -6,6 +6,24 @@ namespace GradeBook.Tests
     public class TypeTests
     {
 
+         [Fact] // atribute
+        public void CSharpBehaviourString()
+        {
+            // arrange - contains variables or conditions
+            string someStringLower = "Alex";
+            string someStringUpper = SetUpperCase(someStringLower);
+            // act - contains conditions of the execution
+
+            // assert - compare actual and expected result
+            Assert.Equal("Alex", someStringLower);
+            Assert.Equal("ALEX", someStringUpper);
+        }
+
+        private string SetUpperCase(string parameter)
+        {
+            return parameter.ToUpper();
+        }
+
         [Fact] // atribute
         public void CSharpValues()
         {
@@ -14,7 +32,7 @@ namespace GradeBook.Tests
             // act - contains conditions of the execution
 
             // assert - compare actual and expected result
-            Assert.Equal(x, 3);
+            Assert.Equal(3, x);
         }
 
         private int GetValue()
